@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> Job Application Tracker</title>
+{% endblock %}
+
+{% block body %}
+<div class = "content">
+    <h1 style ="text-align: center"> Update Jobs</h1>
+    <div class ="form">
+        <form action="/update/{{job.id}}" method= "POST">
+            <input type ="text" name="content" id = "content" value = "{{job.content}}">
+            <input type="submit" value="Add Job App">
+        </form>
+    </div>
+</div>
+{% endblock %}
